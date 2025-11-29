@@ -34,3 +34,12 @@ button:hover{
 .right{
     flex: 1;
 }
+input{
+    border-radius: 5vh;
+    border-style: solid;
+    padding-left: 1.5vh;
+    padding-right: 1.5vh;
+    padding-top: 0.5vh;
+    padding-bottom: 0.5vh;
+    margin-bottom: 1vh;
+}

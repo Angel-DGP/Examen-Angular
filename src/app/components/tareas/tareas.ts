@@ -20,13 +20,18 @@ export class Tareas {
     ]
   }
   eliminarTarea(id:number){
-    this.listaTareas.splice(id-1,1)
+    this.listaTareas.splice(id,1)
   }
   cambiarEstado(tarea: Tarea){
     tarea.completada = !tarea.completada
   }
   agregarTarea(){
+  if(this.titulo.length>0){
     this.listaTareas.push(new Tarea(this.listaTareas.length+1,this.titulo,'',false))
+  }
+  else{
+    alert("Necesitas rellenar el campo de titulo para poder crear la tarea")
+  }
   }
   inFocus(){
     console.log("input activo")

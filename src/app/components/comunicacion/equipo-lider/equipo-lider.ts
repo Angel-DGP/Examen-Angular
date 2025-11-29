@@ -14,9 +14,11 @@ export class EquipoLider {
     this.unContador++;  
   }
   recibirMensaje(mensaje:string){
-    if(mensaje.length>0){
+    if(mensaje=='Aumenta el contador lidel'){
       console.log("Recibimos un mensaje del miembro de equipo, hay que aumentar el contador")
     this.unContador++;
+    }else{
+this.unContador--;
     }
   }
 }

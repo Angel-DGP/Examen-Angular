@@ -1,12 +1,12 @@
 <h1>Tus Tareas</h1>
-@for(tarea of listaTareas; track tarea.id){
+@for(tarea of listaTareas; track $index; let indice = $index){
     <div [style.background-color]="tarea.completada == true ? 'green' : 'red'" class="moduleTarea"> <h4>Titulo: {{tarea.titulo}}</h4>
     <div class="left">    
         <p>Descripcion: {{tarea.descripcion}}</p>
         <h5>Estado: {{tarea.completada == true ? 'Completada' : 'Pendiente'}}</h5>
     </div>    
     <div class="right">
-        <button (click) = "eliminarTarea(tarea.id)">
+        <button (click) = "eliminarTarea(indice)">
         Eliminar Tarea
         </button>
     <br><button (click) = "cambiarEstado(tarea)">

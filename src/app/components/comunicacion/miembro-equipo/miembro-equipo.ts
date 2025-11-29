@@ -12,4 +12,7 @@ export class MiembroEquipo {
   aumentarContadorHijo(){
     this.mensajeEnviado.emit("Aumenta el contador lidel")
   }
+  disminuirContadorHijo(){
+    this.mensajeEnviado.emit("Disminuir el contador lidel")
+  }
 }
