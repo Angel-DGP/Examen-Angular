@@ -1,0 +1,24 @@
+<h1>Tus Tareas</h1>
+@for(tarea of listaTareas; track tarea.id){
+    <div [style.background-color]="tarea.completada == true ? 'green' : 'red'" class="moduleTarea"> <h4>Titulo: {{tarea.titulo}}</h4>
+    <div class="left">    
+        <p>Descripcion: {{tarea.descripcion}}</p>
+        <h5>Estado: {{tarea.completada == true ? 'Completada' : 'Pendiente'}}</h5>
+    </div>    
+    <div class="right">
+        <button (click) = "eliminarTarea(tarea.id)">
+        Eliminar Tarea
+        </button>
+    <br><button (click) = "cambiarEstado(tarea)">
+        Cambiar Estado
+    </button>
+</div>
+    
+</div>
+}
+<h3>Crear Tarea Rapida</h3>
+<h5>Ingrese el titulo de la tarea</h5>
+<input type="text" [(ngModel)] = 'titulo' (focus)="inFocus()" (blur)="inBlur()" >
+<p>Su tarea es: {{titulo}}</p>
+<button (click)="agregarTarea()">Agregar Tarea</button>
+

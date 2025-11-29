@@ -1,0 +1,9 @@
+<h1>Crear Tarea</h1>
+<div style="flex-direction: row;">
+    <input [(ngModel)] = "titulo">
+    <p>Su titulo es: {{titulo}}</p>
+    <input [(ngModel)] = "descripcion" >
+    <p>Su descripcion es: {{descripcion}}</p>
+    <button (click)="guardar()">Guardar</button>
+</div>
+
